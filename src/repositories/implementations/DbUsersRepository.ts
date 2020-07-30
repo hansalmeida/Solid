@@ -8,6 +8,8 @@ export class DbUsersRepository implements UsersRepository {
   async findByEmail(email: string): Promise<User> {
     // Get users from the mock DB
     const users = this.users.find((user) => user.email == email)
+
+    return users
   }
 
   async save(user: User): Promise<void> {
